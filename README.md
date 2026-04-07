@@ -1,6 +1,9 @@
 # 🎬 Movie Pulse
 
 > **Feel the heartbeat of cinema** — a full-stack movie & TV browser built with React + Express.
+>
+## 🌐 Live Demo
+[Movie Pulse](https://movie-pulse-theta-nu.vercel.app/)
 
 ![Stack](https://img.shields.io/badge/stack-React%20%2B%20Express-blueviolet)
 ![TMDB](https://img.shields.io/badge/data-TMDB%20API-01b4e4)
