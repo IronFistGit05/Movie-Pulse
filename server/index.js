@@ -2,16 +2,18 @@ import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
 import 'dotenv/config';
-import { fileURLToPath } from 'url';
-import path from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 const TMDB_KEY = process.env.TMDB_API_KEY || '60c7adcff566c19c283f58cfcb3ba4b6';
 const TMDB_BASE = 'https://api.themoviedb.org/3';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://movie-pulse-theta.vercel.app/'
+  ]
+}));
 app.use(express.json());
 
 // Generic TMDB proxy helper
@@ -103,10 +105,3 @@ app.listen(PORT, () => {
   console.log(`🎬 Movie Pulse server running on http://localhost:${PORT}`);
 });
 
-// Serve React build in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
-  app.get('*', (_, res) =>
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'))
-  );
-}
