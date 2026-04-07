@@ -8,12 +8,7 @@ const PORT = process.env.PORT || 5000;
 const TMDB_KEY = process.env.TMDB_API_KEY || '60c7adcff566c19c283f58cfcb3ba4b6';
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://movie-pulse-theta-nu.vercel.app/'
-  ]
-}));
+app.use(cors());
 app.use(express.json());
 
 // Generic TMDB proxy helper
