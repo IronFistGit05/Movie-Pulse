@@ -1,4 +1,4 @@
-const BASE = import.meta.env.VITE_API_URL || '/api';
+const BASE = 'https://movie-pulse-41me.onrender.com/api';
 export const IMG = 'https://image.tmdb.org/t/p/w500';
 export const IMG_BIG = 'https://image.tmdb.org/t/p/original';
 
