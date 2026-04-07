@@ -11,7 +11,7 @@ const TMDB_BASE = 'https://api.themoviedb.org/3';
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://movie-pulse-theta.vercel.app/'
+    'https://movie-pulse-theta-8w6zd1sci-ironfistgit05s-projects.vercel.app/'
   ]
 }));
 app.use(express.json());
