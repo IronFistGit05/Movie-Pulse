@@ -5,6 +5,8 @@
 ## 🌐 Live Demo
 [Movie Pulse](https://movie-pulse-theta-nu.vercel.app/)
 
+![Movie Pulse Preview](preview.png)
+
 ![Stack](https://img.shields.io/badge/stack-React%20%2B%20Express-blueviolet)
 ![TMDB](https://img.shields.io/badge/data-TMDB%20API-01b4e4)
 
